@@ -1,4 +1,4 @@
-RaSpberrieS
+RaSpberrieS, lecteur RSS
 ===========
 RaSpberrieS est un logiciel pour windows utilisant la plateforme .NET de microsoft dans sa derniere version.
 La particulartité de ce logiciel est l'interface enprunté à windows 8 et apellé Metro.
