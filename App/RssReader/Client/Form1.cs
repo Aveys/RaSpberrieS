@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Client
 {
@@ -26,8 +27,19 @@ namespace Client
 
         private void connect(string p)
         {
-            throw new NotImplementedException();
+            StringBuilder rssContent = new StringBuilder();
+            XmlDocument rss = new XmlDocument();
+            rss.Load(p);
+            XmlNodeList rssList = rss.SelectNodes("rss/channel/item");
+            foreach (XmlNode rssNode in rssList)
+            {
+                rssContent.Append(rssNode.Value + "\n");
+
+                
+            }
+            textBox2.Text = rssContent.ToString();
+            }
+
         }
 
     }
-}
