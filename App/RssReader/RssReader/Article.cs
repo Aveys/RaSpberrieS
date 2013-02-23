@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 using System.Collections.ObjectModel;
-using System.ServiceModel.Syndication;
-
 
 namespace RssReader
 {
@@ -25,10 +22,7 @@ namespace RssReader
             {
                 return this.m_title;
             }
-            set
-            {
-
-            }
+            set;
         }
 
         private string m_author;
@@ -38,10 +32,7 @@ namespace RssReader
             {
                 return this.m_author;
             }
-            set
-            {
-
-            }
+            set;
         }
         //content?
 
@@ -51,11 +42,8 @@ namespace RssReader
             get
             {
                 return this.m_id;
-            }
-            set
-            {
-
-            }
+            } 
+            set;
         }
         private DateTime m_date_pub;
         public DateTime datePub
@@ -64,10 +52,7 @@ namespace RssReader
             {
                 return this.m_date_pub;
             }
-            set
-            {
-
-            }
+            set;
         }
         private Uri m_link;
         public Uri link
@@ -76,10 +61,7 @@ namespace RssReader
             {
                 return this.m_link;
             }
-            set
-            {
-
-            }
+            set;
         }
        
 
@@ -98,37 +80,12 @@ namespace RssReader
             {
                 return this.m_items;
             }
-            set
-            {
-
-            }
-        }
-
-        private string m_title;
-        public string title
-        {
-            get
-            {
-                return this.m_title;
-            }
-            set
-            {
-                this.m_title = value;
-            }
+            set;
         }
         
         public void add( ArticleItem new_item )
         {
             this.items.Add(new_item);
-        }
-
-        public ArticlesData(string uriString)
-        {
-            Uri uri_tmp = new Uri(uriString);
-            SyndicationFeed feed = new SyndicationFeed();
-
-            feed.BaseUri = uri_tmp;
-            
         }
 
     }
@@ -142,10 +99,9 @@ namespace RssReader
             {
                 return this.m_datas;
             }
-            set
-            {
-
-            }
+            set;
         }
+
+
     }
 }
