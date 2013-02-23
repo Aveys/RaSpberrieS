@@ -19,7 +19,7 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != null)
+            if (textBox1.Text != string.Empty)
                 connect(textBox1.Text);
             else
                 MessageBox.Show("Veuillez entrer une adresse");

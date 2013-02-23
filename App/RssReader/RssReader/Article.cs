@@ -89,4 +89,19 @@ namespace RssReader
         }
 
     }
+
+    class ArticlesDataSource
+    {
+        private ObservableCollection<ArticlesData> m_datas = new ObservableCollection<ArticlesData>();
+        public ObservableCollection<ArticlesData> datas
+        {
+            get
+            {
+                return this.m_datas;
+            }
+            set;
+        }
+
+
+    }
 }
