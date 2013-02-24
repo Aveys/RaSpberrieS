@@ -19,27 +19,35 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != string.Empty)
+            progressBar1.Value = 10;
+           // if (textBox1.Text != string.Empty)
                 connect(textBox1.Text);
-            else
-                MessageBox.Show("Veuillez entrer une adresse");
+          //  else
+          //      MessageBox.Show("Veuillez entrer une adresse");
         }
 
         private void connect(string p)
         {
-            StringBuilder rssContent = new StringBuilder();
-            XmlDocument rss = new XmlDocument();
-            rss.Load(p);
-            XmlNodeList rssList = rss.SelectNodes("rss/channel/item");
-            foreach (XmlNode rssNode in rssList)
+            p = "https://developer.apple.com/news/rss/news.rss";
+            StringBuilder rssContent = new StringBuilder(); //Construction du chaine de résultat
+            XmlDocument rss = new XmlDocument(); //Creation de l'objet XML
+            rss.Load(p); // Récupération du XML en ligne
+            XmlNodeList rssList = rss.SelectNodes("rss/channel/item");//Décomposition en liste de noeud
+            foreach (XmlNode rssNode in rssList) // boucle parcourant les noeud
             {
-                rssContent.Append(rssNode.Value + "\n");
+                XmlNode rssSubNode = rssNode.SelectSingleNode("title");
+                string title = rssSubNode != null ? rssSubNode.InnerText : "";
 
-                
-            }
-            textBox2.Text = rssContent.ToString();
-            }
+                rssSubNode = rssNode.SelectSingleNode("link");
+                string link = rssSubNode != null ? rssSubNode.InnerText : "";
 
+                rssSubNode = rssNode.SelectSingleNode("description");
+                string description = rssSubNode != null ? rssSubNode.InnerText : "";
+
+                rssContent.Append("<a href='" + link + "'>" +"<h1>"+ title +"</h1> "+"</a>\n<br>\n" + description+"\n");   
+            }
+            progressBar1.Value = 100;
+            TextBox2.Text = rssContent.ToString(); //affichage de la chaine construite
+            }
         }
-
     }

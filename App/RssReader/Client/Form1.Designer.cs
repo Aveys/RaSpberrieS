@@ -31,7 +31,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TextBox2 = new System.Windows.Forms.RichTextBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,21 +61,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // TextBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(31, 87);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(506, 331);
-            this.textBox2.TabIndex = 3;
+            this.TextBox2.Location = new System.Drawing.Point(12, 73);
+            this.TextBox2.Name = "TextBox2";
+            this.TextBox2.ReadOnly = true;
+            this.TextBox2.Size = new System.Drawing.Size(544, 354);
+            this.TextBox2.TabIndex = 3;
+            this.TextBox2.Text = "";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(31, 13);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(506, 23);
+            this.progressBar1.TabIndex = 4;
+            this.progressBar1.UseWaitCursor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 439);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.TextBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -90,7 +100,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RichTextBox TextBox2;
+        public System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

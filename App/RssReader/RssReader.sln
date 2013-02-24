@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssReader", "RssReader\RssReader.csproj", "{85339F24-ECA4-40D6-9C2A-8577B66C1A50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{67E4D505-8C67-45B1-8DD8-D44E4C48FAFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWPF", "ClientWPF\ClientWPF.csproj", "{897B66F6-4D03-412A-9189-36364173914A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,16 @@ Global
 		{67E4D505-8C67-45B1-8DD8-D44E4C48FAFB}.Release|Mixed Platforms.Build.0 = Release|x86
 		{67E4D505-8C67-45B1-8DD8-D44E4C48FAFB}.Release|x86.ActiveCfg = Release|x86
 		{67E4D505-8C67-45B1-8DD8-D44E4C48FAFB}.Release|x86.Build.0 = Release|x86
+		{897B66F6-4D03-412A-9189-36364173914A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{897B66F6-4D03-412A-9189-36364173914A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
