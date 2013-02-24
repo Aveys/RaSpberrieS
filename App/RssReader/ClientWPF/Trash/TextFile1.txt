@@ -1,0 +1,16 @@
+﻿<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="125*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lNomApp" Content="RaSberrieS"  VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Margin="36,1,50,0"  />
+        <Button Content="Apple RSS" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Width="211" Height="53" BorderThickness="0" Foreground="White" Grid.Row="1" Cursor="Arrow" FontFamily="Roboto" FontWeight="Bold" FontSize="20">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HotTrackColorKey}}"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
