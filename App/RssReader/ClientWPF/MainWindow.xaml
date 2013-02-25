@@ -8,9 +8,12 @@
                 <ColumnDefinition Width="48*"/>
                 <ColumnDefinition Width="125*"/>
             </Grid.ColumnDefinitions>
-            <StackPanel Margin="1,2,550,-1" Grid.ColumnSpan="2" ClipToBounds="True" Background="White">
+            <StackPanel Margin="1,2,550,-1" Grid.ColumnSpan="2" ClipToBounds="True">
+                <StackPanel.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkColorKey}}"/>
+                </StackPanel.Background>
 
-                <Label x:Name="lNomApp" Content="RaSberrieS"  VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Margin="36,1,50,0"  />
+                <Label x:Name="lNomApp" Content="RaSberrieS"  VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Margin="36,1,50,0" Foreground="White"  />
                 <Button x:Name="btnApple" Content="Apple RSS" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Width="211" Height="53" BorderThickness="0" Foreground="White" Grid.Row="1" Cursor="Arrow" FontFamily="Roboto" FontWeight="Bold" FontSize="20" Click="btnApple_Click">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HotTrackColorKey}}"/>
