@@ -13,20 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using MahApps.Metro.Controls;
+using MahApps.Metro.Actions;
 
 namespace ClientWPF
 {
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void btnApple_Click(object sender, RoutedEventArgs e)
+       /* private void btnApple_Click(object sender, RoutedEventArgs e)
         {
             String p = "https://developer.apple.com/news/rss/news.rss";
             this.connect(p);
@@ -53,7 +55,7 @@ namespace ClientWPF
             }
 
             txtRes.Text = rssContent.ToString(); //affichage de la chaine construite
-        }
+        }*/
     }
 }
 
