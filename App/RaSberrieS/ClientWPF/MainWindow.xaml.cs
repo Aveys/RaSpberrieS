@@ -32,7 +32,7 @@ namespace ClientWPF
 
             StringBuilder rssContent = new StringBuilder(); //Construction du chaine de résultat
             XmlDocument rss = new XmlDocument(); //Creation de l'objet XML
-            rss.Load(p); // Récupération du XML en ligne
+            rss.Load(p); // Récupération du XML en ligne (multi-threading à prevoir car cette fonction est bloquante)
             XmlNodeList rssList = rss.SelectNodes("rss/channel/item");//Décomposition en liste de noeud
             foreach (XmlNode rssNode in rssList) // boucle parcourant les noeud
             {
@@ -58,9 +58,11 @@ namespace ClientWPF
             if (p != null && p!="")
             {
                 pr1.IsActive = true;
+               // System.Threading.Thread.Sleep(5000);
                 res = this.connect(p);
                 pr1.IsActive = false;
                 tB.Visibility = Visibility.Visible;
+               // System.Threading.Thread.Sleep(5000);
                 tB.Text = res;
             }
             else
