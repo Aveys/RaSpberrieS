@@ -27,13 +27,7 @@ namespace ClientWPF
         {
             InitializeComponent();
         }
-
-       /* private void btnApple_Click(object sender, RoutedEventArgs e)
-        {
-            String p = "https://developer.apple.com/news/rss/news.rss";
-            this.connect(p);
-        }
-        private void connect(string p)
+        private String connect(string p)
         {
 
             StringBuilder rssContent = new StringBuilder(); //Construction du chaine de résultat
@@ -54,8 +48,24 @@ namespace ClientWPF
                 rssContent.Append("<a href='" + link + "'>" + "<h1>" + title + "</h1> " + "</a>\n<br>\n" + description + "\n");
             }
 
-            txtRes.Text = rssContent.ToString(); //affichage de la chaine construite
-        }*/
+            return rssContent.ToString(); //affichage de la chaine construite
+        }
+
+        private void btnCheck_Click_1(object sender, RoutedEventArgs e)
+        {
+            String res;
+            String p = txtAdresse.Text;
+            if (p != null && p!="")
+            {
+                pr1.IsActive = true;
+                res = this.connect(p);
+                pr1.IsActive = false;
+                tB.Visibility = Visibility.Visible;
+                tB.Text = res;
+            }
+            else
+                MessageBox.Show("Erreur : le champ d'adresse est vide");
+        }
     }
 }
 

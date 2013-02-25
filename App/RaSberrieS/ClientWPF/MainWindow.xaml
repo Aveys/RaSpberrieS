@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Resources/Icons.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatButton.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -43,6 +44,21 @@
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
-    <Grid HorizontalAlignment="Left" Height="501" VerticalAlignment="Top" Width="852"/>
-
+    <Grid HorizontalAlignment="Left" Height="501" VerticalAlignment="Top" Width="852">
+        <TextBox x:Name="txtAdresse" Controls:TextboxHelper.Watermark="Adresse du flux" Controls:TextboxHelper.ClearTextButton="True" Margin="138,16,137,457"  />
+        <Controls:ProgressRing x:Name="pr1" IsActive="False" />
+        <TextBlock x:Name="tB" HorizontalAlignment="Left"  Margin="21,59,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="427" Width="809" Panel.ZIndex="-10" Visibility="Hidden"/>
+        <Button x:Name="btnCheck" HorizontalAlignment="Left" Margin="737,14,0,0" VerticalAlignment="Top" Width="50" Height="29" BorderBrush="Gray" Foreground="Gray" Background="{x:Null}" Click="btnCheck_Click_1" >
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Width="18" Height="14" RenderTransformOrigin="-0.297,0.144">
+                    <Rectangle.Resources>
+                        <SolidColorBrush x:Key="BlackBrush" Color="Gray" />
+                    </Rectangle.Resources>
+                    <Rectangle.Fill>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_check}" />
+                    </Rectangle.Fill>
+                </Rectangle>
+            </StackPanel>
+        </Button>
+    </Grid>
 </Controls:MetroWindow>
