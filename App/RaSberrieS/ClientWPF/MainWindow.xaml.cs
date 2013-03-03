@@ -55,7 +55,7 @@ namespace ClientWPF
         {
             String res;
             String p = txtAdresse.Text;
-            if (p != null && p!="")
+            if ( p == string.Empty )
             {
                 pr1.IsActive = true;
                // System.Threading.Thread.Sleep(5000);

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FeedsSchema"
+    targetNamespace="http://tempuri.org/XMLSchema1.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element type="Feeds" name="FeedData" />
+  
+  <xs:complexType name="FeedItem">
+    <xs:sequence>
+      <xs:element type="xs:unsignedInt" name="id" minOccurs="1" maxOccurs="1" />
+      <xs:element type="xs:string" name="title" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:anyURI" name="uri" maxOccurs="1" minOccurs="1" />
+      <xs:element type="xs:string" name="subtitle" minOccurs="0" maxOccurs="1" />
+      <xs:element type="xs:string" name="content" minOccurs="1" maxOccurs="1" />
+      <xs:element type="xs:string" name="author" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Feed">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name" />
+      <xs:element type="FeedItem" name="feeds" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Feeds">
+    <xs:sequence>
+      <xs:element type="Feed" name="feeds" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
