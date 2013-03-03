@@ -55,7 +55,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\Entypo.ttf" />
-    <None Include="XMLSchema1.xsd">
+    <None Include="Resources\Feeds.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
