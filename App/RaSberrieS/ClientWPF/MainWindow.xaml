@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="RaSberrieS" Height="529" ShowIconOnTitleBar="True" WindowStartupLocation="CenterScreen" Width="858" ShowTitleBar="True">
+        Title="RaSpberrieS" Height="529" ShowIconOnTitleBar="True" WindowStartupLocation="CenterScreen" Width="858" ShowTitleBar="True">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -45,10 +45,14 @@
         </Controls:WindowCommands>
     </Controls:MetroWindow.WindowCommands>
     <Grid HorizontalAlignment="Left" Height="501" VerticalAlignment="Top" Width="852">
-        <TextBox x:Name="txtAdresse" Controls:TextboxHelper.Watermark="Adresse du flux" Controls:TextboxHelper.ClearTextButton="True" Margin="138,16,137,457"  />
-        <Controls:ProgressRing x:Name="pr1" IsActive="False" />
-        <TextBlock x:Name="tB" HorizontalAlignment="Left"  Margin="21,59,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="427" Width="809" Panel.ZIndex="-10" Visibility="Hidden"/>
-        <Button x:Name="btnCheck" HorizontalAlignment="Left" Margin="737,14,0,0" VerticalAlignment="Top" Width="50" Height="29" BorderBrush="Gray" Foreground="Gray" Background="{x:Null}" Click="btnCheck_Click_1" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="137*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtAdresse" Controls:TextboxHelper.Watermark="Adresse du flux" Controls:TextboxHelper.ClearTextButton="True" Margin="107.8,16,137,457" Grid.Column="1"  />
+        <Controls:ProgressRing x:Name="pr1" IsActive="False" Grid.Column="1" Margin="365.8,220,396,221" />
+        <TextBlock x:Name="tB" HorizontalAlignment="Left"  Margin="21,59,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="427" Width="809" Panel.ZIndex="-10" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnCheck" HorizontalAlignment="Left" Margin="706.8,14,0,0" VerticalAlignment="Top" Width="50" Height="29" BorderBrush="Gray" Foreground="Gray" Background="{x:Null}" Click="btnCheck_Click_1" Grid.Column="1" >
             <StackPanel Orientation="Horizontal">
                 <Rectangle Width="18" Height="14" RenderTransformOrigin="-0.297,0.144">
                     <Rectangle.Resources>

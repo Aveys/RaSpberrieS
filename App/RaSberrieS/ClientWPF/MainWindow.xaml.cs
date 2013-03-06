@@ -55,15 +55,16 @@ namespace ClientWPF
         {
             String res;
             String p = txtAdresse.Text;
-            if ( p == string.Empty )
+            Uri uri = new Uri(p);
+            if ( p != string.Empty )
             {
-                pr1.IsActive = true;
-               // System.Threading.Thread.Sleep(5000);
-                res = this.connect(p);
-                pr1.IsActive = false;
-                tB.Visibility = Visibility.Visible;
-               // System.Threading.Thread.Sleep(5000);
-                tB.Text = res;
+                    pr1.IsActive = true;
+                    // System.Threading.Thread.Sleep(5000);
+                    res = this.connect(p);
+                    pr1.IsActive = false;
+                    tB.Visibility = Visibility.Visible;
+                    // System.Threading.Thread.Sleep(5000);
+                    //tB.Text = res;
             }
             else
                 MessageBox.Show("Erreur : le champ d'adresse est vide");
